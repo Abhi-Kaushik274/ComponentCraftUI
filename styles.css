@@ -164,20 +164,36 @@ nav ul li a:hover {
     border: 1px solid #aaa;
   }
   
-
 .element-preview {
-    width: 150px;
-    height: 300px;
-    background-color: #1a1a1a;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    color: #ccc;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
+  width: 150px;
+  height: 300px;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #ccc;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  overflow: hidden; /* Ensures footer stays inside rounded corners */
+  position: relative;
 }
+
+.card-footer {
+  width: 100%;
+  background-color: #2a2a2a;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 0.9rem;
+  color: #aaa;
+  border-top: 1px solid #333;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 
 .element-preview:hover {
     transform: translateY(-5px);
